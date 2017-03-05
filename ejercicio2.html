@@ -16,19 +16,18 @@
 
 	<script>
 		//Escribe aquí tu código Javascript
-		$(window).load(function (){
-			var clases = document.getElementsByTagName("mensaje").length;
-			var span = document.getElementsById("mensaje");
+		function mostrar(){
+			var clases = document.getElementsByClassName("mensaje");
+			var span = document.getElementById("result");
+
 			if (clases.length >=4){
 				span.innerHTML = "Son muchos !";
-			}
-			else if (clases.length > 2 || clases.length < 4){
+			}else if (clases.length > 2 && clases.length < 4){
 				span.innerHTML = "No esta mal";
-			}
-			else (clases.length = 1){
+			}else if(clases.length = 1){
 				span.innerHTML = "Es muy poco";
 			}
-		});
+		}mostrar();
 	</script>
 </body>
 </html>
